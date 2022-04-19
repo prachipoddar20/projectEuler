@@ -1,0 +1,8 @@
+cnt = 0
+num = 0
+den = 1
+for _ in range(1000):
+    num, den = den, den * 2 + num
+    if len(str((num + den))) > len(str(den)):
+        cnt += 1
+print(cnt)
