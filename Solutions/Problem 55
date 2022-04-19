@@ -1,0 +1,7 @@
+def is_lychrel(num):
+    for iter in range(50):
+        num += int(str(num)[::-1])
+        if str(num) == str(num)[::-1]:
+            return False
+    return True
+sum([is_lychrel(num) for num in range(10000)])
