@@ -1,0 +1,7 @@
+for num in range(2, 1000000):
+    num_multiples = [num * x for x in [1, 2, 3, 4, 5, 6]]
+    digit_set = [set(list(str(num))) for num in num_multiples]
+    is_same_set = [dig_set == set(list(str(num))) for dig_set in digit_set]
+    if all(is_same_set):
+        print(num)
+        break
