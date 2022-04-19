@@ -1,0 +1,18 @@
+def isprime(num):
+    if num == 2:
+        return True
+    if num == 3:
+        return True
+    if num > 3:
+        for i in range(2, num):
+            if num % i == 0:
+                return False
+        return True
+
+primenum = 1
+num = 1
+while primenum <= 10001:
+    num += 1
+    if isprime(num):
+        primenum += 1
+print(num)
