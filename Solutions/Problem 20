@@ -1,0 +1,6 @@
+num = 100
+prod = 1
+for i in range(1, num+1):
+    prod = prod * i           #calculting factorial
+
+sum([int(x) for x in list(str(prod))])  #converting the string containing the factorial of 100 into a list then using in-built function 'sum' to add each element of the list.
