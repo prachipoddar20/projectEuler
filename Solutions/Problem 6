@@ -1,0 +1,10 @@
+sumofsquares = 0
+square = 1
+sum = 0
+for i in range(1,101):
+  square = i * i
+  sumofsquares = sumofsquares + square
+  sum = sum + i
+squareofsum = sum * sum
+diff = squareofsum - sumofsquares 
+print(diff)
