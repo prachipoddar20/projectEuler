@@ -1,0 +1,9 @@
+SQUARE_DIGITS_SUM = [sum(int(c)**2 for c in str(i)) for i in tqdm(range(10000000))]
+
+def get_until_repeat(n):
+    while n not in [1, 89]:
+        n = SQUARE_DIGITS_SUM[n]
+    return n
+    
+repeating = [get_until_repeat(i) == 89 for i in tqdm(range(1, 10000000))]
+sum(repeating)
