@@ -8,3 +8,11 @@ def div(n):
     else:
       continue
   return counter
+ 
+ n = 1
+for add in range(2, 1000000):
+  n = n+add
+  if (div(n)>=500):
+    print(n)
+    break
+print(div(28))
