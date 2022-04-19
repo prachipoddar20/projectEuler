@@ -1,0 +1,12 @@
+values = []
+for a in range(2,101):
+  for b in range(2,101):
+    value = a ** b
+    values.append(value)
+
+values = set(values)
+values = list(values)
+values.sort()
+print(values)
+
+print('Total number of distinct terms =', len(values))
