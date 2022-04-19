@@ -1,0 +1,16 @@
+from tqdm.auto import tqdm
+
+import math
+
+FACTORIAL = [math.factorial(i) for i in range(10)]
+def get_chain_length(num):
+    seen = set()
+    while True:
+        seen.add(num)
+        num = sum([FACTORIAL[int(i)] for i in str(num)])
+        if num in seen:
+            return len(seen)
+
+get_chain_length(169)
+
+chains = [get_chain_length(i) == 60 for i in tqdm(range(10**6))]
