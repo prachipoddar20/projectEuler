@@ -1,0 +1,11 @@
+import datetime   #we can import a module named datetime to work with dates as date objects
+
+counter = 0
+
+for year in range(1901,2001):
+  for month in range(1,13):
+    x = datetime.datetime(year, month, 1)    #Using the datetime() class (constructor) of the datetime module to create a date
+    day = x.strftime("%A")    #The method strftime() takes one parameter to specify the format of the returned string. The string "%A" is used for weekday.
+    if day == "Sunday":   #it means the month contains a friday 13th
+      counter = counter+1
+print(counter)
