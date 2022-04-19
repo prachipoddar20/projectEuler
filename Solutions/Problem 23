@@ -1,0 +1,19 @@
+abun = []     #creating an empty list to store all abundant numbers
+for i in range(1, 28123):
+    factors = []      #empty list to store all the factors of a number
+    for k in range(1, i//2+1):
+        if i % k == 0:
+            factors.append(k)
+    if (sum(factors) > i):    #if sum of factors is greater than the number, the number is abundant
+        #print(i, factors)
+        abun.append(i)  
+
+combinations = []
+for num1 in abun:
+    for num2 in abun:
+        if num1+num2 <= 28123:
+            combinations.append(num1+num2)  #adding all the combitions of two numbers to the list
+
+ab_com = set(combinations) 
+
+sum(set(range(1, 28123+1)) - ab_com)    #removing all the positive integers which can be written as the sum of two abundant numbers below 28123 and then using in-built function sum to add them.
