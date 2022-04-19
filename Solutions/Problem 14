@@ -1,0 +1,14 @@
+term_count = []
+for n in range(1, 1000000):
+    tot_terms = 1
+    while n != 1:
+        if n % 2 == 0:
+            n /= 2
+            tot_terms += 1
+        else:
+            n = 3 * n + 1
+            tot_terms += 1
+    term_count.append(tot_terms)
+    
+max_len = max(term_count)
+print(max_len)
