@@ -1,0 +1,34 @@
+def fact(n):    #creating a function to calculate factorial of a number
+  if n == 0:
+    return 1
+  for k in range(1,n):
+    n = n * k
+  return n
+
+def curnum(number):     #creating a function to calculate curious number
+  if number == 1:
+        return False
+  if number == 2:
+        return False
+  if number > 2:
+    sum = 0
+    num = number
+    while num > 0:
+          r = num%10
+          f = fact(r)
+          num = num//10
+          sum = sum + f
+    #print(sum)
+    if sum == number:
+      return True
+    else:
+      return False
+#curnum(1e7)
+
+curnums = []
+for number in range(1,100000):
+  if curnum(number):
+    curnums.append(number)
+  
+sumofcuriousnums = sum(curnums)    
+print(sumofcuriousnums)
