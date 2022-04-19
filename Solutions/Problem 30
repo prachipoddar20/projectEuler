@@ -1,0 +1,15 @@
+def sumOfPowerOfDigits(n):
+  sum = 0
+  while n>0:
+    sum = sum+(n%10)**5
+    n = n//10
+  return sum
+
+fifthpower = []
+sumOfNumbers = 0
+for num in range(2,1000000):
+  if sumOfPowerOfDigits(num) == num:
+    fifthpower.append(num)
+    sumOfNumbers = sumOfNumbers+num
+print(fifthpower)
+print(sumOfNumbers)
